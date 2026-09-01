@@ -71,7 +71,7 @@ Set `TWILIO_WEBHOOK_BASE_URL=https://YOUR-API.onrender.com` in Render and redepl
 1. Open the Streamlit URL.
 2. Use the landing-page Operations credentials shown in the demo.
 3. Select **Create new synthetic data for 20 merchants**.
-4. Download **current demo accounts and issues (CSV)**. It contains only synthetic company names, demo logins, demo passwords, and the current generated issue for each company.
+4. Expand **View current demo accounts and issues (20)**. It shows synthetic company names, demo logins, demo passwords, and the current generated issue for each company directly in the dashboard.
 5. Sign in with one UPI provider-outage account to demonstrate customer recovery and one SDK-regression account to demonstrate engineering escalation.
 
 ## Important limitation

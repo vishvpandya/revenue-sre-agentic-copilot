@@ -4,12 +4,10 @@
 
 from __future__ import annotations
 
-import csv
 import os
 from contextlib import suppress
 from datetime import UTC, datetime
 from html import escape
-from io import StringIO
 from typing import Any
 from zoneinfo import ZoneInfo
 
@@ -116,17 +114,18 @@ def workflow_guide() -> None:
     )
 
 
-def account_guide_csv(accounts: list[dict[str, str]]) -> str:
-    """Create a demo-only CSV of the current synthetic accounts and issues."""
+def account_guide_rows(accounts: list[dict[str, str]]) -> list[dict[str, str]]:
+    """Present current synthetic accounts in a readable in-app table."""
 
-    output = StringIO()
-    writer = csv.DictWriter(
-        output,
-        fieldnames=["merchant_id", "company", "login_id", "password", "current_open_issues"],
-    )
-    writer.writeheader()
-    writer.writerows(accounts)
-    return output.getvalue()
+    return [
+        {
+            "Company": account["company"],
+            "Current payment issue": account["current_open_issues"],
+            "Demo login ID": account["login_id"],
+            "Demo password": account["password"],
+        }
+        for account in accounts
+    ]
 
 
 def login() -> None:
@@ -200,13 +199,13 @@ def login() -> None:
                 st.error(str(exc))
     account_guide = st.session_state.get("synthetic_account_guide", [])
     if account_guide:
-        st.download_button(
-            "Download current demo accounts and issues (CSV)",
-            data=account_guide_csv(account_guide),
-            file_name="revenue-sre-current-demo-accounts.csv",
-            mime="text/csv",
-            help="Synthetic demo accounts and passwords only. Never use with real merchant accounts.",
-        )
+        with st.expander("View current demo accounts and issues (20)", expanded=False):
+            st.caption(
+                "Synthetic demo accounts only. Expand this list after each new data run to choose a UPI or SDK scenario."
+            )
+            st.dataframe(account_guide_rows(account_guide), hide_index=True, width="stretch")
+
+
 def sign_out() -> None:
     with suppress(RuntimeError):
         api("POST", "/revenue-sre/auth/logout", token=st.session_state.token)
