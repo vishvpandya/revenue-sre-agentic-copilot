@@ -71,12 +71,6 @@ flowchart TD
     P --> E
 ```
 
-### Presentation workflow image
-
-The same workflow is available as a slide/video-friendly image:
-
-![Revenue SRE workflow](demo-assets/revenue-sre-workflow.svg)
-
 ## Architecture
 
 ```text
