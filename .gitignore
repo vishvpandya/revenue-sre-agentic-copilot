@@ -1,0 +1,17 @@
+.env
+.streamlit/secrets.toml
+data/
+.venv*/
+.uv-cache/
+.uv-python/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+*.sqlite
+*.sqlite3
+*.db
+.coverage
+htmlcov/
+dist/
+build/

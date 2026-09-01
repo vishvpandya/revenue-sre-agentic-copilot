@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title description">
+  <title id="title">Revenue SRE demo workflow</title>
+  <desc id="description">A compact workflow showing synthetic data, specialist agents, software escalation, UPI customer recovery, approval, and measurement.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07121f"/><stop offset="1" stop-color="#10263a"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4fd7ff"/><stop offset="1" stop-color="#50e2ad"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8Z" fill="#7190ad"/></marker>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000" flood-opacity=".26"/></filter>
+    <style>
+      .heading{font:700 32px Arial,sans-serif;fill:#f5f9ff}.sub{font:400 16px Arial,sans-serif;fill:#aabdd0}.label{font:700 15px Arial,sans-serif;fill:#ddecfa}.body{font:400 13px Arial,sans-serif;fill:#aabdd0}.tiny{font:700 11px Arial,sans-serif;letter-spacing:1.2px;fill:#58d9ff}.node{fill:#13263a;stroke:#33536f;stroke-width:1.4}.nodeGreen{fill:#12372f;stroke:#50e2ad;stroke-width:1.4}.nodeBlue{fill:#13324a;stroke:#4fd7ff;stroke-width:1.4}.nodeAmber{fill:#3b3020;stroke:#ffc761;stroke-width:1.4}.nodeRed{fill:#3d2630;stroke:#ff8585;stroke-width:1.4}.line{fill:none;stroke:#7190ad;stroke-width:2;marker-end:url(#arrow)}.dash{fill:none;stroke:#58d9ff;stroke-width:1.8;stroke-dasharray:6 6;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1600" height="980" fill="url(#background)"/>
+  <rect x="50" y="42" width="44" height="44" rx="12" fill="url(#accent)"/><text x="66" y="72" font-family="Arial" font-size="23" font-weight="800" fill="#07121f">R</text>
+  <text x="110" y="68" class="heading">Revenue SRE</text><text x="110" y="94" class="sub">Safe, explainable payment-reliability workflow</text>
+  <rect x="1312" y="52" width="238" height="36" rx="18" fill="#14362d" stroke="#50e2ad"/><circle cx="1334" cy="70" r="5" fill="#50e2ad"/><text x="1350" y="75" class="body" fill="#d9fff1">LIVE DEMO + TEST INTEGRATIONS</text>
+
+  <text x="62" y="150" class="tiny">1. DEMO INPUT</text>
+  <rect class="nodeBlue" filter="url(#shadow)" x="60" y="168" width="250" height="110" rx="16"/><text x="84" y="205" class="label">Synthetic payment data</text><text x="84" y="231" class="body">20 merchant companies</text><text x="84" y="252" class="body">Different issue scenarios per run</text>
+  <path class="line" d="M310 223 H390"/>
+  <text x="342" y="204" class="tiny">LOGIN</text>
+  <rect class="node" filter="url(#shadow)" x="392" y="168" width="255" height="110" rx="16"/><text x="416" y="205" class="label">Merchant dashboard</text><text x="416" y="231" class="body">Own payment health only</text><text x="416" y="252" class="body">Detection finds success-rate drop</text>
+  <path class="line" d="M647 223 H727"/>
+
+  <text x="748" y="150" class="tiny">2. INVESTIGATE</text>
+  <rect class="nodeGreen" filter="url(#shadow)" x="729" y="168" width="330" height="110" rx="16"/><text x="753" y="204" class="label">Specialist-agent workflow</text><text x="753" y="230" class="body">Scope checks payment attempts</text><text x="753" y="251" class="body">Root cause checks network pattern</text><text x="753" y="272" class="body">Recovery planner proposes safe step</text>
+  <path class="line" d="M1059 223 H1140"/>
+  <text x="1080" y="204" class="tiny">AUDIT</text>
+  <rect class="node" filter="url(#shadow)" x="1142" y="168" width="370" height="110" rx="16"/><text x="1166" y="205" class="label">Agent activity + Copilot</text><text x="1166" y="231" class="body">Stores evidence, conclusions, timestamps</text><text x="1166" y="252" class="body">Gemini explains only recorded facts</text>
+
+  <path class="line" d="M894 278 V350"/>
+  <rect class="nodeAmber" filter="url(#shadow)" x="742" y="352" width="305" height="78" rx="16"/><text x="766" y="383" class="label">What type of issue is it?</text><text x="766" y="407" class="body">The investigation chooses the correct response path.</text>
+
+  <path class="line" d="M780 430 C690 475,450 475,360 520"/>
+  <path class="line" d="M1008 430 C1095 475,1280 475,1370 520"/>
+  <text x="475" y="470" class="tiny">SOFTWARE / SDK / CHECKOUT</text>
+  <text x="1133" y="470" class="tiny">UPI PROVIDER OUTAGE</text>
+
+  <rect class="nodeRed" filter="url(#shadow)" x="70" y="520" width="310" height="118" rx="16"/><text x="94" y="556" class="label">Engineering escalation</text><text x="94" y="582" class="body">Team settings selects the responsible</text><text x="94" y="602" class="body">Engineering contact.</text><text x="94" y="623" class="body">Gemini drafts the incident email.</text>
+  <path class="line" d="M380 579 H475"/>
+  <rect class="nodeBlue" filter="url(#shadow)" x="477" y="520" width="245" height="118" rx="16"/><text x="501" y="556" class="label">Resend email API</text><text x="501" y="582" class="body">Sends controlled email</text><text x="501" y="602" class="body">to the configured test inbox.</text><text x="501" y="623" class="body">Route and result are recorded.</text>
+
+  <rect class="nodeGreen" filter="url(#shadow)" x="886" y="520" width="290" height="118" rx="16"/><text x="910" y="556" class="label">Customer recovery</text><text x="910" y="582" class="body">Gemini drafts a customer-friendly</text><text x="910" y="602" class="body">UPI recovery message and test link.</text><text x="910" y="623" class="body">Merchant approves the small batch.</text>
+  <path class="line" d="M1176 579 H1271"/>
+  <rect class="nodeBlue" filter="url(#shadow)" x="1273" y="520" width="270" height="118" rx="16"/><text x="1297" y="556" class="label">Twilio WhatsApp API</text><text x="1297" y="582" class="body">Sends Sandbox customer messages.</text><text x="1297" y="602" class="body">Test link tracks open, completion,</text><text x="1297" y="623" class="body">and one five-minute follow-up.</text>
+
+  <path class="line" d="M894 430 V720"/>
+  <text x="910" y="510" class="tiny">IF A PAYMENT CHANGE IS NEEDED</text>
+  <rect class="nodeAmber" filter="url(#shadow)" x="625" y="720" width="250" height="125" rx="16"/><text x="649" y="756" class="label">Merchant approval</text><text x="649" y="782" class="body">No customer-facing payment change</text><text x="649" y="802" class="body">can run without owner approval.</text><text x="649" y="823" class="body">Approval is stored in the audit trail.</text>
+  <path class="line" d="M875 783 H945"/>
+  <rect class="nodeGreen" filter="url(#shadow)" x="947" y="720" width="250" height="125" rx="16"/><text x="971" y="756" class="label">Bounded execution</text><text x="971" y="782" class="body">Runs the approved simulated action</text><text x="971" y="802" class="body">once, with duplicate protection.</text><text x="971" y="823" class="body">No real payment setup is changed.</text>
+  <path class="line" d="M1072 845 V892"/>
+  <rect class="nodeBlue" filter="url(#shadow)" x="788" y="894" width="570" height="58" rx="16"/><text x="812" y="927" class="label">Results verifier: compares the changed group with an unchanged holdout group, then records improved / no improvement / rollback.</text>
+
+  <rect x="62" y="894" width="610" height="58" rx="14" fill="#0c1c2d" stroke="#33536f"/><text x="84" y="920" class="tiny">GEMINI'S ROLE</text><text x="84" y="940" class="body">Explains Copilot facts and drafts email / WhatsApp. It never approves or executes a payment action.</text>
+</svg>

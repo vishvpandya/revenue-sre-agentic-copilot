@@ -1,0 +1,34 @@
+contact:
+  max_contacts_per_case: 3
+  cooldown_hours: 12
+  quiet_hours_local:
+    start: "21:00"
+    end: "09:00"
+
+discount:
+  auto_approve_max_pct: 10
+  hard_max_pct: 25
+
+payment_plan:
+  enabled: true
+  min_upfront_pct: 25
+  max_installments: 3
+  max_duration_days: 30
+  require_human_above_inr: 50000
+
+escalation:
+  mandatory_review_above_inr: 50000
+  review_high_value_customer_facing_actions: true
+  escalate_on_dispute: true
+  escalate_on_optout: true
+
+budget:
+  batch_discount_cap_inr: 20000
+
+agent:
+  max_strategy_attempts_per_cycle: 2
+  max_llm_calls_per_case: 6
+  max_transitions_per_case: 30
+
+kill_switch: false
+
